@@ -43,4 +43,4 @@ Crie um arquivo `.env` na raiz do projeto baseado no exemplo abaixo:
 
 ```env
 PORT=3000
-DATABASE_URL="postgresql://USUARIO:SENHA@localhost:5432/NOME_DO_BANCO?esquema=public"
+DATABASE_URL="postgresql://postgres:123456@localhost:5432/escola"
