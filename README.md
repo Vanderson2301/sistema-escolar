@@ -9,8 +9,7 @@ Esta é uma API RESTful desenvolvida em **Node.js** utilizando **Express** e **P
 ### 1. Turma (`Turma`)
 Representa um grupo de alunos agrupados por ano/período.
 * `id` (Int, Autoincrement) - Identificador único.
-* `nome` (String) - Nome descritivo do aluno (Ex: *Vanderson Lindo da Silva*).
-* `turma` (String) - Etapa escolar (Ex: *7º Ano B*).
+* `nome` (String) - Nome descritivo da turma (Ex: *7º Ano A*).
 * `turno` (String) - Período das aulas (Ex: *Vespertino*).
 
 ### 2. Atividade (`Atividade`)
