@@ -1,0 +1,32 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Turma {
+  id         Int         @id @default(autoincrement())
+  nome       String // "6º Ano A"
+  turno      String // "Matutino"
+  atividades Atividade[] // Relacionamento inverso
+  createdAt  DateTime    @default(now())
+  updatedAt  DateTime    @updatedAt
+
+  @@map("turmas")
+}
+
+model Atividade {
+  id          Int      @id @default(autoincrement())
+  titulo      String
+  descricao   String?
+  dataEntrega DateTime
+  turmaId     Int
+  turma       Turma    @relation(fields: [turmaId], references: [id], onDelete: Cascade)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("atividades")
+}
